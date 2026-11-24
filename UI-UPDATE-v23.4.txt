@@ -1,0 +1,9 @@
+EDManager v23.4 — Falcon Logo & Compact Mobile Login
+
+- Embedded the supplied original falcon logo directly in application HTML to avoid broken relative image paths.
+- Added a prominent falcon mark to the login hero and retained header/sidebar marks.
+- Compact responsive phone login layout: smaller header, logo, typography, fields, buttons, benefits and footer.
+- Preserved existing login, Supabase calls, permissions, data logic and cash modules.
+- Updated service-worker cache namespace to force clients to fetch the new interface.
+
+No Supabase migration required. Browser/device and live Supabase regression tests remain to be performed.

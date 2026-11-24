@@ -1,0 +1,18 @@
+EDManager v24.1 deployment
+
+1. Back up the currently deployed PWA files.
+2. Replace the deployed PWA files with the contents of pointage-pwa in this archive.
+3. No new Supabase SQL migration is required. Keep the already-applied v23.9 migration.
+4. The service-worker cache is updated to edmanager-v24-1-cash-accounting so clients fetch the corrected files.
+5. After deployment, refresh/reopen EDManager. If an old screen remains cached, close the installed PWA and reopen it.
+
+Approved accounting equations:
+- Versement camion displayed = truck cash + MEX.
+- Total théorique = truck cash + net Passagers - Décharge - Des acomptes - Charge Pré-vendeur.
+- Total Caisse = truck cash + net Passagers + MEX.
+- MEX is excluded from physical cash and counted once in Total Caisse.
+- Décharge, Des acomptes and Charge Pré-vendeur reduce the physical Total théorique; they are not added to Total Caisse.
+- Passenger refunds reduce net Passagers.
+- Excédents remains independent and excluded from these totals.
+
+The UI formula is explicit. Daily physical closing remains reconciled against the signed cash balance stored/calculated by Supabase.

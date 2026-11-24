@@ -1,0 +1,13 @@
+EDManager v23.2 — Login interface refresh
+
+- New dark navy / electric-blue neon login presentation for desktop and mobile.
+- Existing Supabase username/password login flow, user list loading, password visibility, and permission logic are retained.
+- Login action label changed to “Connexion”.
+- Footer wording: “Développé par Taqieddine Hamza — Tous droits réservés © 2026”.
+- Footer center brand line: “EDManager. Votre partenaire de gestion”.
+- Service-worker cache namespace updated to force the new UI assets to load.
+
+Important scope note:
+The 30-day trial and serial activation items are currently visual presentation only. This update does not implement license issuance, trial countdown, device binding, or serial validation. Those require a separate licensing design and backend implementation.
+
+Validation performed: ZIP integrity and JavaScript syntax check. No live Supabase authentication, browser/device visual regression, or Android APK signing test was performed in this environment.

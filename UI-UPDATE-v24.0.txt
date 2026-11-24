@@ -1,0 +1,14 @@
+EDManager v24.0 — Cash accounting consistency
+
+- Centralized the commercial cash totals in one calculation helper so the dashboard, journal printout and closure PDF use the same definition.
+- Versement camion displayed = truck cash + MEX.
+- Total théorique = truck cash + net Passagers (receipts minus passenger refunds) - Décharge - Pré-vendeur - Des acomptes. It represents the cash that should physically remain in the caisse; MEX is excluded.
+- Total Caisse = Total théorique + Décharge + Pré-vendeur + Des acomptes + MEX. Outgoing amounts are added back as supporting proofs, not as new receipts.
+- MEX is included once in Versement camion and once in Total Caisse, but never in Total théorique.
+- Renamed the dashboard total to “Total Caisse”.
+- The closure PDF now distinguishes Total Caisse from Total théorique / expected physical cash, actual counted cash and the difference.
+- The journal printout now includes the same cash summary.
+- Physical closure reconciliation remains unchanged and matches Total théorique: signed cash operations less employee advances; MEX is excluded because it is not physical cash.
+- Existing records, Supabase permissions, legacy Acompte, and independent Excédents are unchanged.
+
+Supabase: no new SQL migration is required for v24.0. Keep the already-applied v23.9 migration.

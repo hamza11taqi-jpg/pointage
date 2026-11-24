@@ -1,0 +1,2 @@
+EDManager v24.0 — Cash accounting consistency
+Base: v23.9

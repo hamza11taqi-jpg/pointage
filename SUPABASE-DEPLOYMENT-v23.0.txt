@@ -1,0 +1,23 @@
+EDManager v23.0 — Déploiement
+
+IMPORTANT : la migration v22.7 employee-picker est déjà présente dans votre projet et ne doit pas être rejouée. Cette mise à jour ajoute une migration séparée :
+- SUPABASE-MIGRATION-CASH-ADVANCES.sql (à la racine du ZIP)
+- Copie identique dans pointage-pwa/SUPABASE-MIGRATION-CASH-ADVANCES.sql
+
+Étapes :
+1) Sauvegarder le projet Supabase et la version actuelle de l’application.
+2) Ouvrir Supabase > SQL Editor > New Query.
+3) Copier le contenu complet de SUPABASE-MIGRATION-CASH-ADVANCES.sql et l’exécuter une seule fois.
+4) Vérifier le résultat Success. Cette migration crée une table distincte cash_employee_advances et ses fonctions RPC. Elle ne modifie pas la table public.advances utilisée par l’ancien module Acomptes.
+5) Publier ensuite le contenu du dossier pointage-pwa en remplaçant les fichiers de l’application.
+6) Fermer complètement l’application puis la rouvrir afin que le nouveau Service Worker v23.0 charge les fichiers actualisés.
+
+Règles appliquées dans l’interface :
+- Total théorique = versements camion (hors MEX) + Passager.
+- Total = Total théorique + Décharge (y compris les anciennes opérations Prévendeur) + MEX + Des acomptes caisse.
+- MEX reste séparé du cash réel : il n’est ajouté qu’une fois au Total final.
+- Le solde physique attendu pour la clôture continue de soustraire les sorties et les nouvelles avances caisse.
+- Le module Des acomptes caisse est indépendant de l’ancien module Acomptes des salaires.
+- Les anciennes opérations Prévendeur ne sont pas supprimées ; elles apparaissent dans le journal comme Décharge · Prévendeur.
+
+Ne rejouez pas SUPABASE-MIGRATION.sql v22.7 et ne supprimez aucune table existante. La migration v23.0 est additive.

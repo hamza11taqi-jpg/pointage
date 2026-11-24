@@ -1,0 +1,10 @@
+EDManager v24.1 — Cash accounting formula correction
+
+- Replaced the indirect Total Caisse calculation (theoretical balance plus paid-out amounts and MEX) with the approved explicit formula: truck cash + net Passagers + MEX.
+- Total théorique is explicitly calculated as truck cash + net Passagers - Décharge - Pré-vendeur - Des acomptes.
+- MEX remains included in displayed Versement camion (truck cash + MEX), but excluded from physical Total théorique.
+- Passenger refunds continue to reduce net Passagers.
+- Décharge, Pré-vendeur and Des acomptes reduce physical cash; they are not added back into Total Caisse.
+- Dashboard, Journal printout and closure PDF continue to use the shared cashCalculateTotals() helper.
+- The Supabase physical cash balance and cash_close_day() reconciliation are retained.
+- No new SQL migration; no schema, permission, legacy Acompte, or Excédents changes.

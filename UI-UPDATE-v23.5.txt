@@ -1,0 +1,5 @@
+EDManager v23.5 — Professional Caisse & Gestion UI
+
+This release refines the Caisse and Gestion screens with a unified navy/electric-blue interface, larger and clearer icons, stronger typography, premium cards, polished form controls, more visible active states, and responsive layouts.
+
+No Supabase migration is required. This is a front-end styling-only update; no database functions, permission rules, cash calculations, or business workflows were intentionally changed.

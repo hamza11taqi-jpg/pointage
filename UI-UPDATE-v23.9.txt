@@ -1,0 +1,11 @@
+EDManager v23.9 — Cash calculation alignment
+
+- Passager refunds are deducted from net Passagers, reducing Total théorique and the final Total.
+- Décharge and Pré-vendeur are displayed separately while both remain included in the final Total.
+- Des acomptes and MEX remain separate components; MEX is counted once in the final Total.
+- Excédents remain independent and excluded from all cash totals.
+- The live physical cash balance now follows the same signed-operation and employee-advance deduction logic as cash_close_day().
+- The cash closure calculation itself is unchanged; it continues to represent expected physical cash, not the commercial Total.
+- Existing records, employee permissions, legacy Acompte records, and independent Excédents are preserved.
+
+Supabase migration required: SUPABASE-MIGRATION-v23.9-CASH-CALCULATION.sql

@@ -1,0 +1,13 @@
+EDManager v24.0 deployment
+
+1. Replace the deployed PWA files with the contents of pointage-pwa in this archive.
+2. Do not run a new SQL migration for v24.0.
+3. Keep the v23.9 Supabase migration already applied.
+4. The service-worker cache name is updated to edmanager-v24-0-cash-accounting so clients fetch the new files.
+
+Accounting definitions:
+- Versement camion displayed = truck cash + MEX.
+- Total théorique = truck cash + net Passagers - Décharge - Pré-vendeur - Des acomptes. This is the expected physical cash remaining and excludes MEX.
+- Total Caisse = Total théorique + Décharge + Pré-vendeur + Des acomptes + MEX.
+- Therefore Total Caisse equals gross truck cash + net Passagers + MEX, while the paid-out amounts remain visible as proofs.
+- MEX is never included in Total théorique and is counted once in Total Caisse.

@@ -1,0 +1,1 @@
+EDManager v23.9 — Cash calculation alignment

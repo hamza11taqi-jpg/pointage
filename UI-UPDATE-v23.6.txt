@@ -1,0 +1,8 @@
+EDManager v23.6 — Correctif critique de synchronisation des employés
+
+- Ajout d'employé : insertion dans Supabase, confirmation UUID avant affichage.
+- Modification : mise à jour de la ligne Supabase avant rafraîchissement local.
+- Suppression : demande à Supabase d'abord ; en cas de dépendances (pointage/acomptes), l'application conserve la fiche locale et affiche l'erreur.
+- Chargement Admin : lecture directe de la table employees, protégée par la politique RLS existante.
+- Ajout de section : création réelle dans Supabase.
+- Migration additive nickname, sans suppression ni modification des données existantes.

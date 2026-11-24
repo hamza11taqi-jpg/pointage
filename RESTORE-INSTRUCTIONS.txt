@@ -1,0 +1,9 @@
+EDManager v23.8.2 — RESTORE STABLE BASE
+
+Cette version restaure la base v23.7 confirmée fonctionnelle.
+IMPORTANT :
+1. Fermer complètement EDManager et Chrome.
+2. Extraire tout le ZIP dans un nouveau dossier permanent (ne pas lancer depuis WinRAR).
+3. Ouvrir pointage-pwa/index.html depuis ce dossier.
+4. Aucun SQL n'est requis. Ne supprimez aucune donnée Supabase.
+5. Cette version restaure l'interface v23.7; l'amélioration du layout desktop est suspendue jusqu'à validation.

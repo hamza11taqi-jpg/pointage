@@ -1,0 +1,9 @@
+EDManager v24.1 — Cash accounting formula correction
+Base: v24.0
+
+- Total théorique is calculated explicitly as truck cash + net Passagers - Décharge - Pré-vendeur - Des acomptes.
+- Total Caisse is calculated explicitly as truck cash + net Passagers + MEX.
+- MEX is included in displayed Versement camion (cash + MEX), but excluded from physical Total théorique.
+- Cash outflows are not added back into Total Caisse.
+- Physical closing reconciliation continues to use the signed Supabase cash balance and cash_close_day() calculation.
+- No database schema or permission changes.

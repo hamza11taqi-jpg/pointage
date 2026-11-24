@@ -1,0 +1,11 @@
+EDManager v23.3 — Falcon logo + unified workspace visual refresh
+
+- Replaced the old abstract ED mark with a transparent blue/white falcon emblem in the login header and application sidebar.
+- Added a falcon mark beside the active page title in the in-app top bar.
+- Applied a unified navy / electric-blue glass visual theme to the internal workspace: sidebar, header, cards, forms, tables, bottom navigation, dialogs, and quick action surfaces.
+- Standardized the glow and color treatment of existing SVG navigation icons without changing their actions or identifiers.
+- Updated the sidebar ownership wording to: Développé par Taqieddine Hamza — Tous droits réservés © 2026.
+- Preserved existing module markup, event handlers, Supabase calls, permissions, and database migrations. No SQL migration is required for this visual-only update.
+- Bumped the service-worker cache namespace to force clients to load the updated logo and styles.
+
+Validation: archive integrity and JavaScript syntax are checked during packaging. Visual verification on the user's actual phone/desktop and live Supabase regression tests remain necessary.

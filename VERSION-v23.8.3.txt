@@ -1,0 +1,4 @@
+EDManager v23.8.3 — Fixed Compact Desktop Workspace
+Base stable : v23.8.2 / v23.7.
+Modifications limitées à la mise en page CSS ordinateur et à la version du cache Service Worker.
+Aucune modification JavaScript métier ou SQL.

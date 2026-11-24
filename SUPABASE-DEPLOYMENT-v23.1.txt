@@ -1,0 +1,19 @@
+EDManager v23.1 – Deployment notes
+
+1. Make a Supabase backup before applying the migration.
+2. Run SUPABASE-MIGRATION-v23.1.sql in the Supabase SQL Editor.
+3. Confirm the query completes successfully and PostgREST schema cache reloads.
+4. Deploy the PWA contents from pointage-pwa/ to the same hosting location.
+5. Sign out/in and test with an admin account:
+   - add a Passager operation;
+   - add a Décharge operation;
+   - add a Prévendeur operation after selecting an employee;
+   - add a Des acomptes entry after selecting an employee;
+   - add an excess record, settle part of it, reload, and verify the remaining balance and settlement history.
+6. Verify the existing old Acompte module and cash close flow remain unchanged.
+
+Important:
+- This migration intentionally does not replace cash_get_live_balance or cash_close_day.
+- cash_employee_advances remains separate from the old public.advances table.
+- Excess settlement is an independent register and does not automatically create a truck deposit or cash operation.
+- Test on a backed-up/staging project first if one is available.

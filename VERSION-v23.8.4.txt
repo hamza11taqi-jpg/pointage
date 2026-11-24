@@ -1,0 +1,4 @@
+EDManager v23.8.4
+Desktop Login Footer Layout Fix
+Base: v23.8.3
+Visual-only desktop CSS update. No Supabase migration required.

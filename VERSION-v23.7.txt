@@ -1,0 +1,6 @@
+EDManager v23.8.2 — Restore stable v23.7 base
+
+Recovery release based on the user's confirmed working v23.7.
+The application HTML, JavaScript, business logic, Supabase calls, permissions, and UI are unchanged from v23.7.
+Only the Service Worker cache namespace is refreshed to prevent reuse of the broken v23.8/v23.8.1 cached files.
+No database migration required.
